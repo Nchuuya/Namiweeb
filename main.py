@@ -20,13 +20,13 @@ bot = Client(
 
 
 
-@bot.on_message(filters.command(["start"], ['/', ".", "?"]))
+@bot.on_message(filters.command(["hstart"], ['/', ".", "?"]))
 async def start(client, message):
     buttons = [[
-        InlineKeyboardButton("Repo", url="https://github.com/MoeZilla/telegram-senko-bot"),
-        InlineKeyboardButton("Owner", url="https://t.me/Madepranav")
+        InlineKeyboardButton("GitHub", url="https://github.com/Nchuuya"),
+        InlineKeyboardButton("Owner", url="https://t.me/zerohisooka")
     ]]
-    await message.reply_video(video="https://telegra.ph/file/e1a7ba3c3365e3c1206c4.gif", caption=f"Wewcome! OwO\nSenko-san onwy wowks on gwouwps.\nJuwst add me to uw gwouwp and i'ww gweat aww newcomews",
+    await message.reply_video(video="https://telegra.ph/file/1a73924778901c994e1c1.mp4", caption=f"Wewcome! OwO\nNami-san onwy wowks on gwouwps.\nJuwst add me to uw gwouwp and i'ww gweat aww newcomews",
                              reply_markup=InlineKeyboardMarkup(buttons))
   
 
