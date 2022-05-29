@@ -35,7 +35,7 @@ async def start(client, message):
 async def new(_, m: Message):
     if m.from_user.id:
         chat = m.chat.title 
-        senko = Image.open('senko.gif')
+        senko = Image.open('senko.mp4')
         senkos = [senko.copy()]
 
         try:
@@ -61,14 +61,14 @@ async def new(_, m: Message):
             s4 = (s1 - len(senkotext[i // s3]) * 4, s2)
             draw.text(s4, senkotext[i // s3], font=senkofont, anchor=None)
 
-        senkos[0].save("newsenko.gif",
+        senkos[0].save("newsenko.mp4",
                      save_all=True,
                      append_images=senkos[1:],
                      optimize=False, 
                      duration=150,              
                      loop=0)
 
-        await m.reply_video(video="newsenko.gif", caption=f"Welcome to the {m.chat.username}! master {m.from_user.first_name}")
+        await m.reply_video(video="newsenko.mp4", caption=f"Welcome to the {m.chat.username}! master {m.from_user.first_name}")
   
 senko_group = 6
  
